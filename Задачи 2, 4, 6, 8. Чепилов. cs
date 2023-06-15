@@ -93,15 +93,26 @@ else
 Console.Clear();
 Console.Write("введите число -> ");
 int num1 = Convert.ToInt32(Console.ReadLine());
+int count = 0;
+int lastCount = 0;
 
-if (num1 % 2 == 0)
+if (num1 > 0)
 {
-    Console.Write($"число {num1} чётное");
+    lastCount = num1;
 }
 else
 {
-    Console.Write($"число {num1} НЕчётное");
+    lastCount = num1 * (-1);
 }
+
+while (count <= lastCount)
+{
+    if (count % 2 == 0)
+    {
+        Console.Write(count + ", ");
+    }
+}
+
 
 // КОНЕЦ КОДА ЗАДАЧИ 8
 
